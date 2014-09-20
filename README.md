@@ -1,4 +1,4 @@
 MetroGnome
 ==========
 
-It's... just a metronome.
+A web-based metronome that doesn't suck.

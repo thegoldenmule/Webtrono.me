@@ -14,19 +14,7 @@
             console.log("t");
         });
 
-        $('#playback').click(
-            function() {
-                if ($('#playicon').hasClass("paused")) {
-                    $('#playicon').removeClass("paused").addClass("playing");
-
-                    scope.metronome.pause();
-                } else {
-                    $('#playicon').removeClass("playing").addClass("paused");
-
-                    scope.metronome.play();
-                }
-            }
-        );
+        this.playbackController = new PlaybackView(this.metronome);
 
         return scope;
     };

@@ -15,25 +15,34 @@
 
         <script src="js/main.js"></script>
         <script src="js/Metronome.js"></script>
+        <script src="js/PlaybackView.js"></script>
+
 
         <style>
             .container {
-                width: 935px;
+                width: 760px;
             }
         </style>
     </head>
     <body class="metro">
         <div class="container">
-            <div class="grid">
-                <div id="playback" class="tile double double-vertical bg-cyan">
-                    <div class="tile-content">
+            <div class="tile-area no-padding clearfix">
+                    <div class="tile-group">
+                        <div id="playback-down" class="tile bg-yellow double-vertical"></div>
 
-                    </div>
-                    <div class="brand bg-black">
-                        <div id="playicon" class="badge playing"></div>
-                    </div>
-                    <div class="tile-status">
-                        <span class="name">BPM</span>
+                        <div id="playback-play" class="tile bg-cyan double double-vertical">
+                            <div class="tile-content">
+                                <p id='playback-bpm-label' class="header text-center">120</p>
+                            </div>
+                            <div class="brand bg-black">
+                                <div id="playback-playicon" class="badge playing"></div>
+                            </div>
+                            <div class="tile-status">
+                                <span class="name">BPM</span>
+                            </div>
+                         </div>
+
+                        <div id="playback-up" class="tile bg-yellow double-vertical"></div>
                     </div>
                 </div>
             </div>
