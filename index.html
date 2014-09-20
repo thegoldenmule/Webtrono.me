@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <head>
         <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/iconFont.min.css">
 
         <script src="js/fork.js"></script>
         <script src="js/daemon-safe.js"></script>
@@ -16,6 +17,7 @@
         <script src="js/main.js"></script>
         <script src="js/Metronome.js"></script>
         <script src="js/PlaybackView.js"></script>
+        <script src="js/TimerView.js"></script>
 
 
         <style>
@@ -26,26 +28,105 @@
     </head>
     <body class="metro">
         <div class="container">
-            <div class="tile-area no-padding clearfix">
-                    <div class="tile-group">
-                        <div id="playback-down" class="tile bg-yellow double-vertical"></div>
+            <nav class="horizontal-menu">
+                <ul>
+                    <li>
+                        <a class="dropdown-toggle" href="#">Add</a>
+                        <ul class="dropdown-menu" data-role="dropdown">
+                            <li><a href="#">Playback</a></li>
+                            <li><a href="#">Visualizer</a></li>
+                            <li><a href="#">Emphasis</a></li>
+                            <li><a href="#">Audio</a></li>
+                            <li><a href="#">Timer</a></li>
+                            <li><a href="#">Practice Curve</a></li>
+                            <li><a href="#">Timeline</a></li>
+                            <li><a href="#">Notes</a></li>
+                            <li><a href="#">Lesson</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Load</a></li>
+                </ul>
+            </nav>
 
-                        <div id="playback-play" class="tile bg-cyan double double-vertical">
-                            <div class="tile-content">
-                                <p id='playback-bpm-label' class="header text-center">120</p>
-                            </div>
-                            <div class="brand bg-black">
-                                <div id="playback-playicon" class="badge playing"></div>
-                            </div>
-                            <div class="tile-status">
-                                <span class="name">BPM</span>
-                            </div>
-                         </div>
+            <!-- Playback -->
+            <div class="grid">
+                <div class="row">
+                    <div class="span6">
+                        <span class="item-title text-muted">PLAYBACK</span>
+                    </div>
+                </div>
 
-                        <div id="playback-up" class="tile bg-yellow double-vertical"></div>
+                <div class="row">
+
+                    <div class="span1">
+                        <h1>
+                            <i id="playback-down" class="icon-arrow-down"></i>
+                        </h1>
+                    </div>
+
+                    <div class="span2">
+                        <p id='playback-bpm-label' class="header text-center">120</p>
+                    </div>
+
+                    <div class="span1">
+                        <h1>
+                            <i id="playback-up" class="icon-arrow-up"></i>
+                        </h1>
+                    </div>
+
+                    <div class="span1"></div>
+
+                    <div class="span1">
+                        <h1>
+                            <i id="playback-toggle" class="icon-play"></i>
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Timer -->
+            <div class="grid">
+
+                <div class="row">
+                    <div class="span6">
+                        <span class="item-title text-muted">TIMER</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span5">
+                        <div id="timer-progress" class="progress-bar large" data-role="progress-bar" data-color="bg-green"></div>
+                    </div>
+                    <div class="span1">
+                        <p id='timer-label' class="text-center">00:00:000</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span1">
+                        <button id="timer-1" class="bg-cyan"><b>1:00</b></button>
+                    </div>
+                    <div class="span1">
+                        <button id="timer-2" class="bg-cyan"><b>2:00</b></button>
+                    </div>
+                    <div class="span1">
+                        <button id="timer-3" class="bg-cyan"><b>3:00</b></button>
+                    </div>
+                    <div class="span1">
+                        <button id="timer-4" class="bg-cyan"><b>4:00</b></button>
+                    </div>
+                    <div class="span1">
+                        <button id="timer-5" class="bg-cyan"><b>5:00</b></button>
+                    </div>
+                    <div class="span1">
+                        <button id="timer-6" class="bg-cyan"><b>10:00</b></button>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </body>
 </html>

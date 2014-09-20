@@ -14,7 +14,8 @@
             console.log("t");
         });
 
-        this.playbackController = new PlaybackView(this.metronome);
+        var playbackController = new PlaybackView(this.metronome);
+        var timerView = new TimerView();
 
         return scope;
     };

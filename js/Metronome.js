@@ -22,6 +22,10 @@
     global.Metronome.prototype = {
         constructor: global.Metronome,
 
+        isPlaying:function() {
+            return this._playing;
+        },
+
         play:function() {
             if (this._playing) {
                 return;

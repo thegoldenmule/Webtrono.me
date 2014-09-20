@@ -11,13 +11,17 @@
 
         this.metronome = metronome;
 
-        $('#playback-play').click(function() {
-            if ($('#playback-playicon').hasClass("paused")) {
-                $('#playback-playicon').removeClass("paused").addClass("playing");
+        $('#playback-toggle').click(function() {
+            if (metronome.isPlaying()){
+                $('#playback-toggle')
+                    .toggleClass('icon-play')
+                    .toggleClass('icon-pause');
 
                 metronome.pause();
             } else {
-                $('#playback-playicon').removeClass("playing").addClass("paused");
+                $('#playback-toggle')
+                    .toggleClass('icon-play')
+                    .toggleClass('icon-pause');
 
                 metronome.play();
             }
