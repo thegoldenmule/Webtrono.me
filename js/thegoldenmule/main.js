@@ -13,6 +13,7 @@
 
         var playback = new PlaybackView(this.metronome);
         var timer = new TimerView(this.metronome);
+        var timerCurve = new TimerCurveView(this.metronome, timer);
         var visualizer = new VisualizerView(this.metronome);
         var audio = new AudioView(this.metronome);
 

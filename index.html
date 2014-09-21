@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <head>
         <title>Metrognome</title>
 
-        <link rel="stylesheet" href="css/metro-bootstrap.css">
-        <link rel="stylesheet" href="css/iconFont.min.css">
+        <link rel='stylesheet' href='css/metro-bootstrap.css'>
+        <link rel='stylesheet' href='css/iconFont.min.css'>
 
-        <script src="js/lib/fork.js"></script>
-        <script src="js/lib/daemon-safe.js"></script>
-        <script src="js/lib/daemon-methods.js"></script>
+        <script src='js/lib/fork.js'></script>
+        <script src='js/lib/daemon-safe.js'></script>
+        <script src='js/lib/daemon-methods.js'></script>
 
-        <script src="js/lib/signals.min.js"></script>
-        <script src="js/lib/howler.min.js"></script>
+        <script src='js/lib/signals.min.js'></script>
+        <script src='js/lib/howler.min.js'></script>
+        <script src='js/lib/raphael-min.js'></script>
 
-        <script src="js/lib/jquery.min.js"></script>
-        <script src="js/lib/jquery-ui.min.js"></script>
-        <script src="js/lib/jquery.color-2.1.2.min.js"></script>
+        <script src='js/lib/jquery.min.js'></script>
+        <script src='js/lib/jquery-ui.min.js'></script>
+        <script src='js/lib/jquery.color-2.1.2.min.js'></script>
 
-        <script src="js/lib/metro.min.js"></script>
-        <script src="js/lib/metro-button-set.js"></script>
-        <script src="js/lib/metro-slider.js"></script>
+        <script src='js/lib/metro.min.js'></script>
+        <script src='js/lib/metro-button-set.js'></script>
+        <script src='js/lib/metro-slider.js'></script>
 
-        <script src="js/thegoldenmule/main.js"></script>
-        <script src="js/thegoldenmule/Metronome.js"></script>
-        <script src="js/thegoldenmule/PlaybackView.js"></script>
-        <script src="js/thegoldenmule/TimerView.js"></script>
-        <script src="js/thegoldenmule/VisualizerView.js"></script>
-        <script src="js/thegoldenmule/AudioView.js"></script>
+        <script src='js/thegoldenmule/main.js'></script>
+        <script src='js/thegoldenmule/Metronome.js'></script>
+        <script src='js/thegoldenmule/PlaybackView.js'></script>
+        <script src='js/thegoldenmule/TimerView.js'></script>
+        <script src='js/thegoldenmule/TimerCurveView.js'></script>
+        <script src='js/thegoldenmule/VisualizerView.js'></script>
+        <script src='js/thegoldenmule/AudioView.js'></script>
 
         <style>
             body {
@@ -46,44 +48,44 @@
             }
         </style>
     </head>
-    <body class="metro">
-        <div class="contents">
+    <body class='metro'>
+        <div class='contents'>
 
             <!-- Playback -->
-            <div class="grid">
-                <div class="row">
-                    <div class="span6">
-                        <span class="item-title text-muted">PLAYBACK</span>
+            <div class='grid'>
+                <div class='row'>
+                    <div class='span6'>
+                        <span class='item-title text-muted'>PLAYBACK</span>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class='row'>
 
-                    <div class="span1">
+                    <div class='span1'>
                         <h1>
-                            <i id="playback-toggle" class="icon-play"></i>
+                            <i id='playback-toggle' class='icon-play'></i>
                         </h1>
                     </div>
 
-                    <div class="span1" id="playback-block">
+                    <div class='span1' id='playback-block'>
                         <h1>
-                            <i id="playback-icon"></i>
+                            <i id='playback-icon'></i>
                         </h1>
                     </div>
 
-                    <div class="span1">
+                    <div class='span1'>
                         <h1>
-                            <i id="playback-down" class="icon-arrow-down"></i>
+                            <i id='playback-down' class='icon-arrow-down'></i>
                         </h1>
                     </div>
 
-                    <div class="span2">
-                        <p id='playback-bpm-label' class="header text-center">120</p>
+                    <div class='span2'>
+                        <p id='playback-bpm-label' class='header text-center'>120</p>
                     </div>
 
-                    <div class="span1">
+                    <div class='span1'>
                         <h1>
-                            <i id="playback-up" class="icon-arrow-up"></i>
+                            <i id='playback-up' class='icon-arrow-up'></i>
                         </h1>
                     </div>
 
@@ -91,105 +93,147 @@
             </div>
 
             <!-- Audio -->
-            <div class="grid">
+            <div class='grid'>
 
-                <div class="row">
-                    <div class="span6">
-                        <span class="item-title text-muted">AUDIO</span>
+                <div class='row'>
+                    <div class='span6'>
+                        <span class='item-title text-muted'>AUDIO</span>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="button-set" data-role="button-group">
-                        <button class="audio-button">
-                            <span class="text-center text-info">Off</span>
+                <div class='row'>
+                    <div class='button-set' data-role='button-group'>
+                        <button class='audio-button'>
+                            <span class='text-center text-info'>Off</span>
                         </button>
-                        <button class="active audio-button" sound-name='audio/tick0'>
-                            <span class="text-center text-info">Pong</span>
+                        <button class='active audio-button' sound-name='audio/tick0'>
+                            <span class='text-center text-info'>Pong</span>
                         </button>
-                        <button class="audio-button" sound-name='audio/tick1'>
-                            <span class="text-center text-info">Boop</span>
+                        <button class='audio-button' sound-name='audio/tick1'>
+                            <span class='text-center text-info'>Boop</span>
                         </button>
-                        <button class="audio-button" sound-name='audio/tick2'>
-                            <span class="text-center text-info">Blep</span>
+                        <button class='audio-button' sound-name='audio/tick2'>
+                            <span class='text-center text-info'>Blep</span>
                         </button>
-                        <button class="audio-button" sound-name='audio/tick3'>
-                            <span class="text-center text-info">Ping</span>
+                        <button class='audio-button' sound-name='audio/tick3'>
+                            <span class='text-center text-info'>Ping</span>
                         </button>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="span5">
-                        <div id="audio-volume" class="slider" data-role="slider" data-min='0' data-max='100' data-position='80' data-accuracy='1'></div>
+                <div class='row'>
+                    <div class='span5'>
+                        <div id='audio-volume' class='slider' data-role='slider' data-min='0' data-max='100' data-position='80' data-accuracy='1'></div>
                     </div>
 
-                    <div class="span1">
-                        <p id='audio-label' class="text-center">80</p>
+                    <div class='span1'>
+                        <p id='audio-label' class='text-center'>80</p>
                     </div>
                 </div>
             </div>
 
             <!-- Timer -->
+            <div class='grid'>
+
+                <div class='row'>
+                    <div class='span6'>
+                        <span class='item-title text-muted'>TIMER</span>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='span5'>
+                        <div id='timer-progress' class='progress-bar large' data-role='progress-bar' data-color='bg-green'></div>
+                    </div>
+                    <div class='span1'>
+                        <p id='timer-label' class='text-center'>00:00:000</p>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='button-set' data-role='button-group'>
+                        <button class='timer-button active' timer-value='0'><b>Off</b></button>
+                        <button class='timer-button' timer-value='1'><b>1:00</b></button>
+                        <button class='timer-button' timer-value='2'><b>2:00</b></button>
+                        <button class='timer-button' timer-value='3'><b>3:00</b></button>
+                        <button class='timer-button' timer-value='4'><b>4:00</b></button>
+                        <button class='timer-button' timer-value='5'><b>5:00</b></button>
+                        <button class='timer-button' timer-value='10'><b>10:00</b></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Timer Curve -->
             <div class="grid">
 
-                <div class="row">
-                    <div class="span6">
-                        <span class="item-title text-muted">TIMER</span>
+                <div class='row'>
+                    <div class='span6'>
+                        <span class='item-title text-muted'>TIMER-CURVE</span>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="button-set" data-role="button-group">
-                        <button class="timer-button active" timer-value="0"><b>Off</b></button>
-                        <button class="timer-button" timer-value="1"><b>1:00</b></button>
-                        <button class="timer-button" timer-value="2"><b>2:00</b></button>
-                        <button class="timer-button" timer-value="3"><b>3:00</b></button>
-                        <button class="timer-button" timer-value="4"><b>4:00</b></button>
-                        <button class="timer-button" timer-value="5"><b>5:00</b></button>
-                        <button class="timer-button" timer-value="10"><b>10:00</b></button>
-                    </div>
+                <div class='row'>
+                    <div id='timer-canvas-container' style='width: 380px;height: 50px'></div>
                 </div>
 
-                <div class="row">
-                    <div class="span5">
-                        <div id="timer-progress" class="progress-bar large" data-role="progress-bar" data-color="bg-green"></div>
-                    </div>
-                    <div class="span1">
-                        <p id='timer-label' class="text-center">00:00:000</p>
+                <div class='row'>
+                    <div class='button-set' data-role='button-group'>
+                        <button class='timer-curve-button active' timer-value='0'><b>0%</b></button>
+                        <button class='timer-curve-button' timer-value='5'><b>5%</b></button>
+                        <button class='timer-curve-button' timer-value='10'><b>10%</b></button>
+                        <button class='timer-curve-button' timer-value='15'><b>15%</b></button>
+                        <button class='timer-curve-button' timer-value='20'><b>20%</b></button>
+                        <button class='timer-curve-button' timer-value='25'><b>25%</b></button>
+                        <button class='timer-curve-button' timer-value='50'><b>50%</b></button>
                     </div>
                 </div>
 
             </div>
 
             <!-- Visualizer -->
-            <div class="grid">
+            <div class='grid'>
 
-                <div class="row">
-                    <div class="span6">
-                        <span class="item-title text-muted">VISUALIZER</span>
+                <div class='row'>
+                    <div class='span6'>
+                        <span class='item-title text-muted'>VISUALIZER</span>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="button-set" data-role="button-group">
-                        <button class="active vs-button">
-                            <span class="text-center">Off</span>
+                <div class='row'>
+                    <div class='button-set' data-role='button-group'>
+                        <button class='active vs-button'>
+                            <span class='text-center'>Off</span>
                         </button>
-                        <button class="vs-button">
-                            <span class="text-center text-info">Blue</span>
+                        <button class='vs-button'>
+                            <span class='text-center text-info'>Blue</span>
                         </button>
-                        <button class="vs-button">
-                            <span class="text-center text-alert">Red</span>
+                        <button class='vs-button'>
+                            <span class='text-center text-alert'>Red</span>
                         </button>
-                        <button class="vs-button">
-                            <span class="text-center text-warning">Orange</span>
+                        <button class='vs-button'>
+                            <span class='text-center text-warning'>Orange</span>
                         </button>
-                        <button class="vs-button">
-                            <span class="text-center text-success">Green</span>
+                        <button class='vs-button'>
+                            <span class='text-center text-success'>Green</span>
                         </button>
                     </div>
                 </div>
+            </div>
+
+            <!-- Notes -->
+            <div class='grid'>
+
+                <div class='row'>
+                    <div class='span6'>
+                        <span class='item-title text-muted'>NOTES</span>
+                    </div>
+                </div>
+
+                <div class='input-control textarea'>
+                    <textarea id='notes-input'></textarea>
+                </div>
+
             </div>
 
         </div>

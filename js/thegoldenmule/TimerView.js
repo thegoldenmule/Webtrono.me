@@ -4,11 +4,11 @@
  */
 
 (function (global) {
-    "use strict";
+    'use strict';
 
     function parseTwoDigit(digit) {
         if (digit < 10) {
-            return "0" + digit;
+            return '0' + digit;
         }
 
         return digit;
@@ -16,11 +16,11 @@
 
     function parseThreeDigit(digit) {
         if (digit < 10) {
-            return "00" + digit;
+            return '00' + digit;
         }
 
         if (digit < 100) {
-            return "0" + digit;
+            return '0' + digit;
         }
 
         return digit;
@@ -33,7 +33,7 @@
         var seconds = Math.floor(milliseconds / 1000);
         milliseconds -= seconds * 1000;
 
-        return parseTwoDigit(minutes) + ":" + parseTwoDigit(seconds) + ":" + parseThreeDigit(milliseconds);
+        return parseTwoDigit(minutes) + ':' + parseTwoDigit(seconds) + ':' + parseThreeDigit(milliseconds);
     }
 
     global.TimerView = function (metronome) {
@@ -73,7 +73,7 @@
         this._daemon = new Daemon.safe(this, this._tick, 1);
         this._daemon.pause();
 
-        this._timerBar = $("#timer-progress").progressbar();
+        this._timerBar = $('#timer-progress').progressbar();
     };
 
     global.TimerView.prototype = {
@@ -125,7 +125,7 @@
         _tick:function() {
             if (this._startTime == null) {
                 this._timerBar.progressbar('value', 0);
-                $("#timer-label").text("00:00:000");
+                $('#timer-label').text('00:00:000');
             } else {
                 var timeElapsed = Date.now() - this._startTime;
 
@@ -133,7 +133,7 @@
                     this.stop();
                 } else {
                     this._timerBar.progressbar('value', timeElapsed / this._totalTime * 100);
-                    $("#timer-label").text(parseTime(this._totalTime - timeElapsed));
+                    $('#timer-label').text(parseTime(this._totalTime - timeElapsed));
                 }
             }
         }
