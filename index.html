@@ -30,33 +30,17 @@
         <script src="js/AudioView.js"></script>
 
         <style>
-            .container {
-                width: 760px;
+            .contents {
+                display: block;
+                width: 460px;
+                left: 0px;
+                margin-left: auto;
+                margin-right: auto;
             }
         </style>
     </head>
     <body class="metro">
-        <div class="container">
-            <nav class="horizontal-menu">
-                <ul>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Add</a>
-                        <ul class="dropdown-menu" data-role="dropdown">
-                            <li><a href="#">Playback</a></li>
-                            <li><a href="#">Visualizer</a></li>
-                            <li><a href="#">Emphasis</a></li>
-                            <li><a href="#">Audio</a></li>
-                            <li><a href="#">Timer</a></li>
-                            <li><a href="#">Practice Curve</a></li>
-                            <li><a href="#">Timeline</a></li>
-                            <li><a href="#">Notes</a></li>
-                            <li><a href="#">Lesson</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Save</a></li>
-                    <li><a href="#">Load</a></li>
-                </ul>
-            </nav>
+        <div class="contents">
 
             <!-- Playback -->
             <div class="grid">
@@ -67,6 +51,18 @@
                 </div>
 
                 <div class="row">
+
+                    <div class="span1">
+                        <h1>
+                            <i id="playback-toggle" class="icon-play"></i>
+                        </h1>
+                    </div>
+
+                    <div class="span1" id="playback-block">
+                        <h1>
+                            <i id="playback-icon"></i>
+                        </h1>
+                    </div>
 
                     <div class="span1">
                         <h1>
@@ -81,18 +77,6 @@
                     <div class="span1">
                         <h1>
                             <i id="playback-up" class="icon-arrow-up"></i>
-                        </h1>
-                    </div>
-
-                    <div class="span1" id="playback-block">
-                        <h1>
-                            <i id="playback-icon"></i>
-                        </h1>
-                    </div>
-
-                    <div class="span1">
-                        <h1>
-                            <i id="playback-toggle" class="icon-play"></i>
                         </h1>
                     </div>
 
