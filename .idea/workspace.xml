@@ -7,7 +7,7 @@
     </list>
     <ignored path="Metrognome.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411330303722" ignored="false" />
+    <file path="/index.html" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411330453312" ignored="false" />
     <file path="/main.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411325582599" ignored="false" />
     <file path="/Metronome.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411269108508" ignored="false" />
     <file path="/README.md" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411242610031" ignored="false" />
@@ -38,10 +38,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="72" column="38" selection-start="2322" selection-end="2322" vertical-scroll-proportion="0.6738609">
+                <state line="36" column="33" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.3681055">
                   <folding />
                 </state>
               </provider>
@@ -51,10 +51,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="VisualizerView.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="VisualizerView.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/VisualizerView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="0" selection-start="654" selection-end="654" vertical-scroll-proportion="0.5452463">
+                <state line="24" column="26" selection-start="591" selection-end="591" vertical-scroll-proportion="0.46735394">
                   <folding />
                 </state>
               </provider>
@@ -459,16 +459,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/VisualizerView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="38" selection-start="2322" selection-end="2322" vertical-scroll-proportion="0.6738609">
+        <state line="24" column="26" selection-start="591" selection-end="591" vertical-scroll-proportion="0.46735394">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/VisualizerView.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="654" selection-end="654" vertical-scroll-proportion="0.5452463">
+        <state line="36" column="33" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.3681055">
           <folding />
         </state>
       </provider>
