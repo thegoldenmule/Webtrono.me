@@ -36,7 +36,7 @@
         return parseTwoDigit(minutes) + ":" + parseTwoDigit(seconds) + ":" + parseThreeDigit(milliseconds);
     }
 
-    global.TimerView = function () {
+    global.TimerView = function (metronome) {
         var scope = this;
 
         $('#timer-1').click(function() {
@@ -58,8 +58,18 @@
             scope.start(10);
         });
 
+        metronome.Paused.add(function() {
+            scope.pause();
+        });
+
+        metronome.Played.add(function() {
+            scope.resume();
+        });
+
         this._startTime = null;
+        this._pausedTime = null;
         this._totalTime = null;
+
         this._daemon = new Daemon.safe(this, this._tick, 1);
         this._daemon.pause();
 
@@ -69,9 +79,35 @@
     global.TimerView.prototype = {
         constructor: global.TimerView,
 
-        start:function(minutes){
+        start:function(minutes) {
+            this._pausedTime = null;
             this._startTime = Date.now();
             this._totalTime = minutes * 60000;
+
+            this._daemon.play();
+        },
+
+        pause:function() {
+            if (null !== this._pausedTime) {
+                return;
+            }
+
+            if (null === this._startTime) {
+                return;
+            }
+
+            this._daemon.pause();
+            this._pausedTime = Date.now();
+        },
+
+        resume:function() {
+            if (null === this._pausedTime || null === this._startTime) {
+                return;
+            }
+
+            var duration = this._pausedTime - this._startTime;
+            this._pausedTime = null;
+            this._startTime = Date.now() - duration;
 
             this._daemon.play();
         },
@@ -79,6 +115,8 @@
         stop:function() {
             this._daemon.pause();
             this._startTime = null;
+            this._pausedTime = null;
+            this._totalTime = null;
 
             this._tick();
         },

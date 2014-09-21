@@ -9,6 +9,8 @@
     global.Metronome = function () {
         this.bpm = 120;
 
+        this.Paused = new signals.Signal();
+        this.Played = new signals.Signal();
         this.Ticked = new signals.Signal();
 
         this._playing = false;
@@ -36,6 +38,8 @@
             this._daemon.play();
 
             this._playing = true;
+
+            this.Played.dispatch();
         },
 
         pause:function() {
@@ -45,6 +49,8 @@
 
             this._daemon.pause();
             this._playing = false;
+
+            this.Paused.dispatch();
         },
 
         _tick:function() {
