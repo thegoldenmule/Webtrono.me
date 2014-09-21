@@ -39,6 +39,8 @@
     global.TimerView = function (metronome) {
         var scope = this;
 
+        this._metronome = metronome;
+
         $('#timer-1').click(function() {
             scope.start(1);
         });
@@ -85,6 +87,7 @@
             this._totalTime = minutes * 60000;
 
             this._daemon.play();
+            this._metronome.play();
         },
 
         pause:function() {

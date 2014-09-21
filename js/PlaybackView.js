@@ -13,16 +13,8 @@
 
         $('#playback-toggle').click(function() {
             if (metronome.isPlaying()){
-                $('#playback-toggle')
-                    .toggleClass('icon-play')
-                    .toggleClass('icon-pause');
-
                 metronome.pause();
             } else {
-                $('#playback-toggle')
-                    .toggleClass('icon-play')
-                    .toggleClass('icon-pause');
-
                 metronome.play();
             }
         });
@@ -37,6 +29,37 @@
             metronome.bpm -= 1;
 
             scope.updateBPM();
+        });
+
+        metronome.Paused.add(function() {
+            var selector = $('#playback-toggle');
+            if (selector.hasClass('icon-pause')) {
+                selector.removeClass('icon-pause');
+            }
+
+            if (!selector.hasClass('icon-play')) {
+                selector.addClass('icon-play');
+            }
+        });
+
+        metronome.Played.add(function() {
+            var selector = $('#playback-toggle');
+            if (selector.hasClass('icon-play')) {
+                selector.removeClass('icon-play');
+            }
+
+            if (!selector.hasClass('icon-pause')) {
+                selector.addClass('icon-pause');
+            }
+        });
+
+        metronome.Ticked.add(function() {
+            // tock icon
+            $('#playback-icon').toggleClass('icon-thermometer');
+
+            setTimeout(function() {
+                $('#playback-icon').toggleClass('icon-thermometer');
+            }, 100);
         });
     };
 
