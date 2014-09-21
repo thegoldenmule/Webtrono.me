@@ -14,6 +14,7 @@
         var playback = new PlaybackView(this.metronome);
         var timer = new TimerView(this.metronome);
         var visualizer = new VisualizerView(this.metronome);
+        var audio = new AudioView(this.metronome);
 
         return scope;
     };

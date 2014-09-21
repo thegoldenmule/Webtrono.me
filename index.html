@@ -2,6 +2,8 @@
 <html>
     <meta charset="UTF-8">
     <head>
+        <title>Metrognome</title>
+
         <link rel="stylesheet" href="css/metro-bootstrap.css">
         <link rel="stylesheet" href="css/iconFont.min.css">
 
@@ -10,9 +12,12 @@
         <script src="js/daemon-methods.js"></script>
 
         <script src="js/signals.min.js"></script>
+        <script src="js/howler.min.js"></script>
+
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.color-2.1.2.min.js"></script>
+
         <script src="js/metro.min.js"></script>
         <script src="js/metro-button-set.js"></script>
 
@@ -21,6 +26,7 @@
         <script src="js/PlaybackView.js"></script>
         <script src="js/TimerView.js"></script>
         <script src="js/VisualizerView.js"></script>
+        <script src="js/AudioView.js"></script>
 
         <style>
             .container {
@@ -166,6 +172,25 @@
                         <button class="vs-button">
                             <span class="text-center text-success">Green</span>
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio -->
+            <div class="grid">
+
+                <div class="row">
+                    <div class="span6">
+                        <span class="item-title text-muted">AUDIO</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-control switch fg-black">
+                        <label>
+                            <input id="audio-switch" type="checkbox" />
+                            <span class="check"></span>
+                        </label>
                     </div>
                 </div>
             </div>
