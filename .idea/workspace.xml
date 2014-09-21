@@ -2,6 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48715f1f-a5e1-4272-b3a4-f816269f6439" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\AudioView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/AudioView.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\Metronome.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/Metronome.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\PlaybackView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\TimerView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\VisualizerView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\daemon-methods.js" afterPath="$PROJECT_DIR$/js/lib/daemon-methods.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\daemon-safe.js" afterPath="$PROJECT_DIR$/js/lib/daemon-safe.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\fork.js" afterPath="$PROJECT_DIR$/js/lib/fork.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\howler.min.js" afterPath="$PROJECT_DIR$/js/lib/howler.min.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\jquery-ui.min.js" afterPath="$PROJECT_DIR$/js/lib/jquery-ui.min.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\jquery.color-2.1.2.min.js" afterPath="$PROJECT_DIR$/js/lib/jquery.color-2.1.2.min.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\jquery.min.js" afterPath="$PROJECT_DIR$/js/lib/jquery.min.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\main.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/main.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\metro-button-set.js" afterPath="$PROJECT_DIR$/js/lib/metro-button-set.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\metro-slider.js" afterPath="$PROJECT_DIR$/js/lib/metro-slider.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\metro.min.js" afterPath="$PROJECT_DIR$/js/lib/metro.min.js" />
+      <change type="MOVED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\js\signals.min.js" afterPath="$PROJECT_DIR$/js/lib/signals.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,7 +58,7 @@
           <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="33" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.3681055">
+                <state line="36" column="33" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.7338129">
                   <folding />
                 </state>
               </provider>
@@ -52,7 +69,7 @@
       <split-second>
         <leaf>
           <file leaf-file-name="VisualizerView.js" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/VisualizerView.js">
+            <entry file="file://$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="24" column="26" selection-start="591" selection-end="591" vertical-scroll-proportion="0.46735394">
                   <folding />
@@ -163,6 +180,28 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thegoldenmule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metrognome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metrognome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -230,11 +269,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\js\thegoldenmule" />
+      <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\js\lib" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\js" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\audio" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\css" />
-      <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\fonts" />
-      <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome" />
     </key>
   </component>
   <component name="RunManager">
@@ -358,14 +397,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/PlaybackView.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="30" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/daemon-methods.js">
+    <entry file="file://$PROJECT_DIR$/js/lib/daemon-methods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
@@ -374,14 +413,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/daemon-safe.js">
+    <entry file="file://$PROJECT_DIR$/js/lib/daemon-safe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/fork.js">
+    <entry file="file://$PROJECT_DIR$/js/lib/fork.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="193" column="4" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.5">
           <folding />
@@ -410,42 +449,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/PlaybackView.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="0" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Metronome.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/Metronome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="13" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/metro-slider.js">
+    <entry file="file://$PROJECT_DIR$/js/lib/metro-slider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="66" selection-start="3255" selection-end="3255" vertical-scroll-proportion="0.27790698">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/AudioView.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/AudioView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="12" selection-start="794" selection-end="1143" vertical-scroll-proportion="0.3768614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/TimerView.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="39" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.0">
           <folding />
@@ -459,7 +498,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/VisualizerView.js">
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="26" selection-start="591" selection-end="591" vertical-scroll-proportion="0.46735394">
           <folding />
@@ -468,7 +507,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="33" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.3681055">
+        <state line="36" column="33" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.7338129">
           <folding />
         </state>
       </provider>
