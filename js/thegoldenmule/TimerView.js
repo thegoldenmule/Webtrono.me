@@ -39,6 +39,9 @@
     global.TimerView = function (metronome) {
         var scope = this;
 
+        this.Started = new signals.Signal();
+        this.Stopped = new signals.Signal();
+
         this._metronome = metronome;
 
         $('.timer-button').click(function(event) {
@@ -79,6 +82,18 @@
     global.TimerView.prototype = {
         constructor: global.TimerView,
 
+        getProgress:function() {
+            if (null === this._startTime) {
+                return 0;
+            }
+
+            if (null === this._pausedTime) {
+                return (Date.now() - this._startTime) / this._totalTime;
+            }
+
+            return (this._pausedTime - this._startTime) / this._totalTime;
+        },
+
         start:function(minutes) {
             this._pausedTime = null;
             this._startTime = Date.now();
@@ -86,6 +101,8 @@
 
             this._daemon.play();
             this._metronome.play();
+
+            this.Started.dispatch();
         },
 
         pause:function() {
@@ -120,6 +137,8 @@
             this._totalTime = null;
 
             this._tick();
+
+            this.Stopped.dispatch();
         },
 
         _tick:function() {

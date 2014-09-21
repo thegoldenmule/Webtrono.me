@@ -60,6 +60,8 @@
             setTimeout(function() {
                 $('#playback-icon').toggleClass('icon-thermometer');
             }, 100);
+
+            scope.updateBPM();
         });
     };
 
@@ -67,7 +69,7 @@
         constructor: global.PlaybackView,
 
         updateBPM:function(){
-            $('#playback-bpm-label').text(this.metronome.bpm.toString())
+            $('#playback-bpm-label').text(Math.ceil(this.metronome.bpm).toString())
         }
     };
 })(this);

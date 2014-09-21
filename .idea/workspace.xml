@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48715f1f-a5e1-4272-b3a4-f816269f6439" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/bezier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Metrognome.iws" />
@@ -15,11 +15,11 @@
     <file path="/README.md" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411242610031" ignored="false" />
     <file path="/PlaybackController.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411244374865" ignored="false" />
     <file path="/Dummy.txt" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411245962155" ignored="false" />
-    <file path="/PlaybackView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411269799910" ignored="false" />
-    <file path="/TimerView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411331139555" ignored="false" />
+    <file path="/PlaybackView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411336193517" ignored="false" />
+    <file path="/TimerView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411334617689" ignored="false" />
     <file path="/VisualizerView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411268488299" ignored="false" />
     <file path="/AudioView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411329281329" ignored="false" />
-    <file path="/TimerCurveView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411334282385" ignored="false" />
+    <file path="/TimerCurveView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411336466094" ignored="false" />
     <file path="/bezier.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411333519567" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +45,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="176" column="0" selection-start="6831" selection-end="6831" vertical-scroll-proportion="0.34772182">
+                <state line="178" column="69" selection-start="6935" selection-end="6935" vertical-scroll-proportion="0.38848922">
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -66,10 +66,19 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="PlaybackView.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="71" column="51" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="TimerView.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="44" column="12" selection-start="954" selection-end="1492" vertical-scroll-proportion="0.0">
+                <state line="129" column="32" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -78,7 +87,7 @@
           <file leaf-file-name="TimerCurveView.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="8" selection-start="184" selection-end="184" vertical-scroll-proportion="-0.047674417">
+                <state line="46" column="47" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.40697673">
                   <folding />
                 </state>
               </provider>
@@ -104,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/js/PlaybackController.js" />
         <option value="$PROJECT_DIR$/css/iconFont.min.css" />
         <option value="$PROJECT_DIR$/css/metro-bootstrap.css" />
@@ -115,10 +123,11 @@
         <option value="$PROJECT_DIR$/js/AudioView.js" />
         <option value="$PROJECT_DIR$/js/TimerView.js" />
         <option value="$PROJECT_DIR$/js/VisualizerView.js" />
-        <option value="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" />
         <option value="$PROJECT_DIR$/js/thegoldenmule/main.js" />
         <option value="$PROJECT_DIR$/js/lib/bezier.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" />
+        <option value="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" />
         <option value="$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js" />
       </list>
     </option>
@@ -391,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/thegoldenmule/Metronome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="13" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
@@ -447,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="12" selection-start="954" selection-end="1492" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/lib/bezier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.21744186">
@@ -465,16 +460,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="0" selection-start="6831" selection-end="6831" vertical-scroll-proportion="0.34772182">
+        <state line="178" column="69" selection-start="6935" selection-end="6935" vertical-scroll-proportion="0.38848922">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="32" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="51" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="184" selection-end="184" vertical-scroll-proportion="-0.047674417">
+        <state line="46" column="47" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.40697673">
           <folding />
         </state>
       </provider>

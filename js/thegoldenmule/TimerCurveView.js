@@ -15,10 +15,10 @@
         // draws background
         var width = container.offsetWidth;
         var height = container.offsetHeight;
-        this._bg = paper.rect(0, 0, width, height);
-        this._bg.attr('fill', '#CCCCCC');
-        this._bg.attr('stroke', '#AAAAAA');
-        this._bg.attr('stroke-width', 3);
+        var bg = paper.rect(0, 0, width, height);
+        bg.attr('fill', '#CCCCCC');
+        bg.attr('stroke', '#AAAAAA');
+        bg.attr('stroke-width', 3);
 
         // draw playhead
         var playhead = paper.path('m0,0l0,' + height);
@@ -26,10 +26,31 @@
         playhead.attr('stroke', '#DD1111');
 
         // draw curve
-        this._curve = paper.path(
+        var curve = paper.path(
             'M0,0' + height
             + 'Q' + width / 2 + ',' + height + ',' + width + ',' + height);
-        this._curve.attr('stroke', '#000000');
+        curve.attr('stroke', '#000000');
+
+        var percentage = 0;
+        var intervalId = 0;
+        var originalBPM = 0;
+        timer.Started.add(function() {
+            originalBPM = metronome.bpm;
+
+            intervalId = setInterval(function() {
+                var t = timer.getProgress();
+                playhead.transform('T' + t * width + ',0');
+
+                // affect bpm
+                var k = 1 - 2 * Math.abs(t - 0.5);
+                var diff = originalBPM * percentage / 100;
+                metronome.bpm = originalBPM + k * diff;
+            }, 1);
+        });
+
+        timer.Stopped.add(function() {
+            clearInterval(intervalId);
+        });
 
         // buttons
         $('.timer-curve-button').click(function(event) {
@@ -38,17 +59,17 @@
                 var name = attributes[i].name;
                 var value = attributes[i].value;
                 if (name === 'timer-value') {
-                    var percentile = parseInt(value);
-                    if (0 === percentile) {
-                        scope._curve.remove();
-                        scope._curve = paper.path(
+                    percentage = parseInt(value);
+                    if (0 === percentage) {
+                        curve.remove();
+                        curve = paper.path(
                             'M0,0' + height
                                 + 'Q' + width / 2 + ',' + height + ',' + width + ',' + height);
                     } else {
-                        scope._curve.remove();
-                        scope._curve = paper.path(
+                        curve.remove();
+                        curve = paper.path(
                             'M0,0' + height
-                            + 'Q' + width / 2 + ',-' + (percentile / 50 * 40) + ',' + width + ',' + height);
+                            + 'Q' + width / 2 + ',-' + (percentage / 50 * 40) + ',' + width + ',' + height);
                     }
                     break;
                 }
