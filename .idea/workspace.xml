@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48715f1f-a5e1-4272-b3a4-f816269f6439" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/test.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick0.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick0.ogg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick0.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/AudioView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/howler.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick1.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick1.ogg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick2.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick2.ogg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick3.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick3.ogg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audio/tick3.wav" />
+      <change type="DELETED" beforePath="C:\Users\bjordan\Documents\GitHub\Metrognome\audio\test.mp3" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/AudioView.js" afterPath="$PROJECT_DIR$/js/AudioView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/TimerView.js" afterPath="$PROJECT_DIR$/js/TimerView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Metrognome.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411325905404" ignored="false" />
+    <file path="/index.html" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411327358206" ignored="false" />
     <file path="/main.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411325582599" ignored="false" />
     <file path="/Metronome.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411269108508" ignored="false" />
     <file path="/README.md" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411242610031" ignored="false" />
@@ -23,7 +28,7 @@
     <file path="/PlaybackView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411269799910" ignored="false" />
     <file path="/TimerView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411269885120" ignored="false" />
     <file path="/VisualizerView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411268488299" ignored="false" />
-    <file path="/AudioView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411326123666" ignored="false" />
+    <file path="/AudioView.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411327310180" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +50,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="39" selection-start="456" selection-end="456" vertical-scroll-proportion="0.14268585">
+                <state line="130" column="68" selection-start="4908" selection-end="4908" vertical-scroll-proportion="-28.153847">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AudioView.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/AudioView.js">
+          <file leaf-file-name="TimerView.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/TimerView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="18" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+                <state line="81" column="8" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.3523256">
                   <folding />
                 </state>
               </provider>
@@ -67,10 +72,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.46735394">
+                <state line="24" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -80,6 +85,15 @@
             <entry file="file://$PROJECT_DIR$/js/Metronome.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="47" column="13" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AudioView.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/AudioView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="32" column="11" selection-start="835" selection-end="835" vertical-scroll-proportion="0.60366553">
                   <folding />
                 </state>
               </provider>
@@ -115,10 +129,10 @@
         <option value="$PROJECT_DIR$/js/VisualizerView.js" />
         <option value="$PROJECT_DIR$/js/Metronome.js" />
         <option value="$PROJECT_DIR$/js/PlaybackView.js" />
-        <option value="$PROJECT_DIR$/js/TimerView.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/AudioView.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/TimerView.js" />
       </list>
     </option>
   </component>
@@ -254,8 +268,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\js" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\audio" />
+      <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\js" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\css" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome\fonts" />
       <recent name="C:\Users\bjordan\Documents\GitHub\Metrognome" />
@@ -455,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/TimerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="35" selection-start="2107" selection-end="2107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/VisualizerView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="19" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
@@ -476,23 +483,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/AudioView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="18" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.46735394">
+        <state line="24" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="456" selection-end="456" vertical-scroll-proportion="0.14268585">
+        <state line="130" column="68" selection-start="4908" selection-end="4908" vertical-scroll-proportion="-28.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/TimerView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="8" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.3523256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/AudioView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="11" selection-start="835" selection-end="835" vertical-scroll-proportion="0.60366553">
           <folding />
         </state>
       </provider>

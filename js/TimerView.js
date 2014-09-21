@@ -130,7 +130,7 @@
                 $("#timer-label").text("00:00:000");
             } else {
                 var timeElapsed = Date.now() - this._startTime;
-                console.log(timeElapsed + ": " + this._totalTime);
+
                 if (timeElapsed > this._totalTime) {
                     this.stop();
                 } else {
