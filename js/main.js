@@ -10,12 +10,10 @@
         var scope = this;
 
         this.metronome = new Metronome();
-        this.metronome.Ticked.add(function() {
-            console.log("t");
-        });
 
-        var playbackController = new PlaybackView(this.metronome);
-        var timerView = new TimerView();
+        var playback = new PlaybackView(this.metronome);
+        var timer = new TimerView(this.metronome);
+        var visualizer = new VisualizerView(this.metronome);
 
         return scope;
     };

@@ -12,13 +12,15 @@
         <script src="js/signals.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.color-2.1.2.min.js"></script>
         <script src="js/metro.min.js"></script>
+        <script src="js/metro-button-set.js"></script>
 
         <script src="js/main.js"></script>
         <script src="js/Metronome.js"></script>
         <script src="js/PlaybackView.js"></script>
         <script src="js/TimerView.js"></script>
-
+        <script src="js/VisualizerView.js"></script>
 
         <style>
             .container {
@@ -126,7 +128,41 @@
                 </div>
             </div>
 
+            <!-- Visualizer -->
+            <div class="grid">
 
+                <div class="row">
+                    <div class="span6">
+                        <span class="item-title text-muted">VISUALIZER</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-control switch fg-black">
+                        <label>
+                            <input id="vs-switch" type="checkbox" />
+                            <span class="check"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="button-set" data-role="button-group">
+                        <button class="active vs-button">
+                            <span class="text-center text-info">Blue</span>
+                        </button>
+                        <button class="vs-button">
+                            <span class="text-center text-alert">Red</span>
+                        </button>
+                        <button class="vs-button">
+                            <span class="text-center text-warning">Orange</span>
+                        </button>
+                        <button class="vs-button">
+                            <span class="text-center text-success">Green</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

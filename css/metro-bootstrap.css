@@ -2640,7 +2640,7 @@ a {
   outline: 1px #999999 dotted !important;
 }
 .metro .input-control.switch input[type="checkbox"]:checked ~ .check {
-  background: #008287;
+  background: #000000;
 }
 .metro .input-control.switch input[type="checkbox"]:checked ~ .check:after {
   left: auto;
