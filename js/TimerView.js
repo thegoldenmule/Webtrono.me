@@ -41,23 +41,21 @@
 
         this._metronome = metronome;
 
-        $('#timer-1').click(function() {
-            scope.start(1);
-        });
-        $('#timer-2').click(function() {
-            scope.start(2);
-        });
-        $('#timer-3').click(function() {
-            scope.start(3);
-        });
-        $('#timer-4').click(function() {
-            scope.start(4);
-        });
-        $('#timer-5').click(function() {
-            scope.start(5);
-        });
-        $('#timer-6').click(function() {
-            scope.start(10);
+        $('.timer-button').click(function(event) {
+            var attributes = event.target.attributes;
+            for (var i = 0, len = attributes.length; i < len; i++) {
+                var name = attributes[i].name;
+                var value = attributes[i].value;
+                if (name === 'timer-value') {
+                    var minutes = parseInt(value);
+                    if (0 === minutes) {
+                        scope.stop();
+                    } else {
+                        scope.start(minutes);
+                    }
+                    break;
+                }
+            }
         });
 
         metronome.Paused.add(function() {

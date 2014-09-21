@@ -7,13 +7,9 @@
     "use strict";
 
     global.VisualizerView = function (metronome) {
-        var color = '#1BA1E2';
+        var color = '#FFFFFF';
 
         metronome.Ticked.add(function() {
-            if (!$('#vs-switch').is(':checked')) {
-                return;
-            }
-
             $('body')
                 .animate(
                 {

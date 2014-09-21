@@ -20,6 +20,7 @@
 
         <script src="js/metro.min.js"></script>
         <script src="js/metro-button-set.js"></script>
+        <script src="js/metro-slider.js"></script>
 
         <script src="js/main.js"></script>
         <script src="js/Metronome.js"></script>
@@ -108,16 +109,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-control switch fg-black">
-                        <label>
-                            <input id="audio-switch" type="checkbox" />
-                            <span class="check"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="button-set" data-role="button-group">
+                        <button class="audio-button">
+                            <span class="text-center text-info">Off</span>
+                        </button>
                         <button class="active audio-button" sound-name='audio/tick0'>
                             <span class="text-center text-info">Pong</span>
                         </button>
@@ -132,6 +127,16 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="span5">
+                        <div id="audio-volume" class="slider" data-role="slider" data-min='0' data-max='100' data-position='80' data-accuracy='1'></div>
+                    </div>
+
+                    <div class="span1">
+                        <p id='audio-label' class="text-center">80</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Timer -->
@@ -144,6 +149,18 @@
                 </div>
 
                 <div class="row">
+                    <div class="button-set" data-role="button-group">
+                        <button class="timer-button active" timer-value="0"><b>Off</b></button>
+                        <button class="timer-button" timer-value="1"><b>1:00</b></button>
+                        <button class="timer-button" timer-value="2"><b>2:00</b></button>
+                        <button class="timer-button" timer-value="3"><b>3:00</b></button>
+                        <button class="timer-button" timer-value="4"><b>4:00</b></button>
+                        <button class="timer-button" timer-value="5"><b>5:00</b></button>
+                        <button class="timer-button" timer-value="10"><b>10:00</b></button>
+                    </div>
+                </div>
+
+                <div class="row">
                     <div class="span5">
                         <div id="timer-progress" class="progress-bar large" data-role="progress-bar" data-color="bg-green"></div>
                     </div>
@@ -152,28 +169,6 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="button-set" data-role="button-group">
-                        <div class="span1">
-                            <button id="timer-1"><b>1:00</b></button>
-                        </div>
-                        <div class="span1">
-                            <button id="timer-2"><b>2:00</b></button>
-                        </div>
-                        <div class="span1">
-                            <button id="timer-3"><b>3:00</b></button>
-                        </div>
-                        <div class="span1">
-                            <button id="timer-4"><b>4:00</b></button>
-                        </div>
-                        <div class="span1">
-                            <button id="timer-5"><b>5:00</b></button>
-                        </div>
-                        <div class="span1">
-                            <button id="timer-6"><b>10:00</b></button>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Visualizer -->
@@ -186,17 +181,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-control switch fg-black">
-                        <label>
-                            <input id="vs-switch" type="checkbox" />
-                            <span class="check"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="button-set" data-role="button-group">
                         <button class="active vs-button">
+                            <span class="text-center">Off</span>
+                        </button>
+                        <button class="vs-button">
                             <span class="text-center text-info">Blue</span>
                         </button>
                         <button class="vs-button">
