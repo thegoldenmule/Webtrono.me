@@ -32,6 +32,16 @@
         <concat
                 destfile="${target.dir}/js/webtronome.${major.version}.${minor.version}.${bugfix.version}-lib.js"
                 fixlastline="yes">
+            <filelist dir="${source.lib.js.dir}/daemon">
+                <file name="fork.js"/>
+                <file name="daemon-safe.js"/>
+                <file name="daemon-methods.js"/>
+            </filelist>
+            <filelist dir="${source.lib.js.dir}/jquery">
+                <file name="jquery.js"/>
+                <file name="jquery-ui.js"/>
+                <file name="jquery.color.js"/>
+            </filelist>
             <fileset
                     dir="${source.lib.js.dir}"
                     includes="*.js"/>
