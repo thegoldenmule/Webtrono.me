@@ -1,4 +1,6 @@
-MetroGnome
+Webtrono.me
 ==========
 
-A web-based metronome that doesn't suck.
+Because Metrono.me was taken!
+
+It's so web 3.0!
