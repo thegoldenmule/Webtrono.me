@@ -29,7 +29,7 @@
 
         $('.vs-button').click(function(event) {
             // set color
-            color = $(event.target).find('span').css('color');
+            color = $(event.target).css('background-color');
         });
     };
 

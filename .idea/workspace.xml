@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48715f1f-a5e1-4272-b3a4-f816269f6439" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js" afterPath="$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Metrognome.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411333595756" ignored="false" />
+    <file path="/index.html" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411353473580" ignored="false" />
     <file path="/main.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411331710790" ignored="false" />
     <file path="/Metronome.js" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411269108508" ignored="false" />
     <file path="/README.md" changelist="48715f1f-a5e1-4272-b3a4-f816269f6439" time="1411242610031" ignored="false" />
@@ -45,10 +44,19 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="178" column="69" selection-start="6935" selection-end="6935" vertical-scroll-proportion="0.38848922">
+                <state line="216" column="33" selection-start="8729" selection-end="8729" vertical-scroll-proportion="0.8698885">
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="metro-bootstrap.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/metro-bootstrap.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="969" column="9" selection-start="20587" selection-end="20594" vertical-scroll-proportion="-7.84">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -84,10 +92,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TimerCurveView.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="TimerCurveView.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="46" column="47" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.40697673">
+                <state line="44" column="29" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VisualizerView.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="52" selection-start="780" selection-end="780" vertical-scroll-proportion="0.6169844">
                   <folding />
                 </state>
               </provider>
@@ -113,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/PlaybackController.js" />
         <option value="$PROJECT_DIR$/css/iconFont.min.css" />
         <option value="$PROJECT_DIR$/css/metro-bootstrap.css" />
         <option value="$PROJECT_DIR$/js/Metronome.js" />
@@ -125,10 +141,11 @@
         <option value="$PROJECT_DIR$/js/VisualizerView.js" />
         <option value="$PROJECT_DIR$/js/thegoldenmule/main.js" />
         <option value="$PROJECT_DIR$/js/lib/bezier.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/thegoldenmule/TimerView.js" />
         <option value="$PROJECT_DIR$/js/thegoldenmule/PlaybackView.js" />
         <option value="$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js" />
       </list>
     </option>
   </component>
@@ -216,6 +233,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metrognome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Metrognome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -227,12 +258,12 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="PublishConfig">
+  <component name="PublishConfig" serverName="thegoldenmule" serverId="1f511a05-e9fb-41d6-b887-31b13b53e26b" autoUpload="true">
     <servers>
       <server id="1f511a05-e9fb-41d6-b887-31b13b53e26b">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" />
+            <mapping deploy="/labs/webtronome" local="$PROJECT_DIR$" web="http://thegoldenmule.com/labs/webtronome" />
           </mappings>
         </serverdata>
       </server>
@@ -251,6 +282,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -290,13 +328,14 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2524013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2524013" sideWeight="0.67074525" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -421,20 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/metro-bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1269" column="8" selection-start="27092" selection-end="27092" vertical-scroll-proportion="0.3523256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="26" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/thegoldenmule/Easing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -458,15 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="69" selection-start="6935" selection-end="6935" vertical-scroll-proportion="0.38848922">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="32" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.0">
@@ -481,9 +497,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/metro-bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="969" column="9" selection-start="20587" selection-end="20594" vertical-scroll-proportion="-7.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="33" selection-start="8729" selection-end="8729" vertical-scroll-proportion="0.8698885">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/thegoldenmule/TimerCurveView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="47" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.40697673">
+        <state line="44" column="29" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/thegoldenmule/VisualizerView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="52" selection-start="780" selection-end="780" vertical-scroll-proportion="0.6169844">
           <folding />
         </state>
       </provider>
