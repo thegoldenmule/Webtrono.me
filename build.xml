@@ -1,7 +1,11 @@
 <project name="boX" default="dev">
 
+    <!-- define minifier task -->
+    <taskdef name="jsmin"
+        classname="net.matthaynes.jsmin.JSMin_Task"
+        classpath="build/jsmin.jar"/>
+
     <target name="-load-properties">
-        <property name="yui.jar" value="build/yuicompressor.jar"/>
         <property name="rhino.jar" value="build/rhino.jar"/>
         <property name="jshint.js" value="build/jshint.js"/>
 
@@ -74,17 +78,7 @@
     </target>
 
     <target name="-js.minify" depends="-js.concatenate">
-        <apply executable="java" parallel="false" dest="${target.dir}/js">
-            <fileset
-                    dir="${target.dir}/js"
-                    includes="webtronome.${major.version}.${minor.version}.${bugfix.version}-core.js"/>
-            <arg line="-jar"/>
-            <arg path="${yui.jar}"/>
-            <srcfile/>
-            <arg line="-o"/>
-            <mapper type="glob" from="*.js" to="*-min.js"/>
-            <targetfile/>
-        </apply>
+        <jsmin srcfile="${target.dir}/js/webtronome.${major.version}.${minor.version}.${bugfix.version}.js" suffix="true" />
         <echo>Finished</echo>
     </target>
 
