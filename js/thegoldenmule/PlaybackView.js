@@ -69,7 +69,7 @@
         constructor: global.PlaybackView,
 
         updateBPM:function(){
-            $('#playback-bpm-label').text(Math.ceil(this.metronome.bpm).toString())
+            $('#playback-bpm-label').text(Math.ceil(this.metronome.bpm).toString());
         }
     };
 })(this);

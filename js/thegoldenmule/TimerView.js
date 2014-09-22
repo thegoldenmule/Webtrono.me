@@ -50,7 +50,7 @@
                 var name = attributes[i].name;
                 var value = attributes[i].value;
                 if (name === 'timer-value') {
-                    var minutes = parseInt(value);
+                    var minutes = parseInt(value, 10);
                     if (0 === minutes) {
                         scope.stop();
                     } else {
@@ -142,7 +142,7 @@
         },
 
         _tick:function() {
-            if (this._startTime == null) {
+            if (null === this._startTime) {
                 this._timerBar.progressbar('value', 0);
                 $('#timer-label').text('00:00:000');
             } else {

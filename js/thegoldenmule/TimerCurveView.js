@@ -10,7 +10,7 @@
         var scope = this;
 
         var container = document.getElementById('timer-canvas-container');
-        var paper = Raphael(container, '100%', '100%');
+        var paper = new Raphael(container, '100%', '100%');
 
         // draws background
         var width = container.offsetWidth;
@@ -26,9 +26,7 @@
         playhead.attr('stroke', '#DD1111');
 
         // draw curve
-        var curve = paper.path(
-            'M0,0' + height
-            + 'Q' + width / 2 + ',' + height + ',' + width + ',' + height);
+        var curve = paper.path('M0,0' + height + 'Q' + width / 2 + ',' + height + ',' + width + ',' + height);
         curve.attr('stroke', '#000000');
 
         var percentage = 0;
@@ -59,17 +57,13 @@
                 var name = attributes[i].name;
                 var value = attributes[i].value;
                 if (name === 'timer-value') {
-                    percentage = parseInt(value);
+                    percentage = parseInt(value, 10);
                     if (0 === percentage) {
                         curve.remove();
-                        curve = paper.path(
-                            'M0,0' + height
-                                + 'Q' + width / 2 + ',' + height + ',' + width + ',' + height);
+                        curve = paper.path('M0,0' + height + 'Q' + width / 2 + ',' + height + ',' + width + ',' + height);
                     } else {
                         curve.remove();
-                        curve = paper.path(
-                            'M0,0' + height
-                            + 'Q' + width / 2 + ',-' + (percentage / 50 * 40) + ',' + width + ',' + height);
+                        curve = paper.path('M0,0' + height + 'Q' + width / 2 + ',-' + (percentage / 50 * 40) + ',' + width + ',' + height);
                     }
                     break;
                 }

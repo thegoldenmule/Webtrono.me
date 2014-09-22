@@ -27,7 +27,7 @@
             var value = $('#audio-volume').slider('value');
             volume = value / 100;
 
-            $('#audio-label').text(value)
+            $('#audio-label').text(value);
         });
 
         $('.audio-button').click(function(event) {
