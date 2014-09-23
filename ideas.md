@@ -8,5 +8,5 @@ More Stuff
 * Graph progress against goals.
 * Other components:
     * Decibel meter-- stay *under* or within epsilon of a curve.
-    * Timeline-- shows measures + *time signature*. Audio would add emphasis.
+    * -Timeline shows measures + *time signature*. Audio would add emphasis.-
 * Random time signature + random tempo.
