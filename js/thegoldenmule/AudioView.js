@@ -9,18 +9,31 @@
     global.AudioView = function (metronome) {
         var scope = this;
         var volume = 80;
+        var beatsPerMeasure = 4;
+        var beatCount = 0;
+        var audioEnabled = true;
 
-        this._tick = null;
-        this.load('audio/tick0');
+        this._tick = this.load('audio/tick0');
+        this._tock = this.load('audio/tock3');
 
         metronome.Ticked.add(function() {
-            if (null === scope._tick) {
+            if (null === scope._tick || !audioEnabled) {
                 return;
             }
 
-            scope._tick.volume(volume);
-            scope._tick.stop();
-            scope._tick.play();
+            var tick = scope._tick;
+
+            beatCount = (beatCount + 1) % beatsPerMeasure;
+            if (beatCount % beatsPerMeasure == 1) {
+                tick = scope._tock;
+            }
+
+            tick.volume(volume / 100);
+            tick.play();
+        });
+
+        $('#audio-enabled').click(function(event) {
+            audioEnabled = event.target.checked;
         });
 
         $('#audio-volume').on('changed', function(event) {
@@ -30,16 +43,44 @@
             $('#audio-label').text(value);
         });
 
-        $('.audio-button').click(function(event) {
-            scope._tick = null;
-
+        $('.audio-tick-button').click(function(event) {
             var attributes = event.target.attributes;
             for (var i = 0, len = attributes.length; i < len; i++) {
                 var name = attributes[i].name;
                 var value = attributes[i].value;
                 if (name === 'sound-name') {
-                    scope.load(value);
+                    scope._tick = scope.load(value);
                     break;
+                }
+            }
+        });
+
+        $('.audio-tock-button').click(function(event) {
+            var attributes = event.target.attributes;
+            for (var i = 0, len = attributes.length; i < len; i++) {
+                var name = attributes[i].name;
+                var value = attributes[i].value;
+                if (name === 'sound-name') {
+                    scope._tock = scope.load(value);
+                    break;
+                }
+            }
+        });
+
+        $('.sig-button').click(function(event) {
+            var attributes = event.target.attributes;
+            for (var i = 0, len = attributes.length; i < len; i++) {
+                var name = attributes[i].name;
+                var value = attributes[i].value;
+                if (name === 'sig-value') {
+                    var timeSig = value.split('/');
+                    if (2 === timeSig.length)
+                    {
+                        beatsPerMeasure = parseInt(timeSig[0], 10);
+                        metronome.noteValue = parseInt(timeSig[1], 10);
+
+                        return;
+                    }
                 }
             }
         });
@@ -49,7 +90,7 @@
         constructor: global.AudioView,
 
         load:function(soundName) {
-            this._tick = new Howl({
+            return new Howl({
                 urls:
                     [
                         soundName + '.mp3',

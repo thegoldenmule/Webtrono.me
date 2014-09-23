@@ -8,6 +8,7 @@
 
     global.Metronome = function () {
         this.bpm = 120;
+        this.noteValue = 4;
 
         this.Paused = new signals.Signal();
         this.Played = new signals.Signal();
@@ -54,12 +55,17 @@
         },
 
         _tick:function() {
-            var msPerTick = (1000 * 60) / this.bpm;
+            // doesn't support unusual meters...
+            if (this.noteValue % 4 !== 0) {
+                this.noteValue = 4;
+            }
+
+            var msPerTick = (1000 * 60) / (this.bpm * this.noteValue / 4);
             var currentTime = Date.now();
             var diff = currentTime - this._lastTime;
 
-            if (diff > msPerTick) {
-                this._lastTime = currentTime + diff - msPerTick;
+            if (diff >= msPerTick) {
+                this._lastTime = this._lastTime + msPerTick;
 
                 this.Ticked.dispatch();
             }

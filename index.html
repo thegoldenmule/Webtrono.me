@@ -7,13 +7,13 @@
         <link rel='stylesheet' href='css/metro-bootstrap.css'>
         <link rel='stylesheet' href='css/iconFont.min.css'>
 
-        <!-- Debug
+        <!-- Debug -->
         <script src='dist/js/webtronome.0.1.0.js'></script>
-        -->
-
-        <!-- Live -->
-        <script src='dist/js/webtronome.0.1.0.min.js'></script>
         <!-- -->
+
+        <!-- Live
+        <script src='dist/js/webtronome.0.1.0.min.js'></script>
+         -->
 
         <style>
             body {
@@ -44,34 +44,29 @@
                 </div>
 
                 <div class='row'>
-
                     <div class='span1'>
                         <i id='playback-toggle' class='icon-play' style='cursor: pointer; font-size: 50pt; margin-top: 11px;'></i>
                     </div>
-
                     <div class='span1' id='playback-block'>
                         <h1>
-                            <i id='playback-icon' style="font-size: 50pt;"></i>
+                            <i id='playback-icon' style='font-size: 50pt;'></i>
                         </h1>
                     </div>
-
                     <div class='span1'>
                         <h1>
                             <i id='playback-down' class='icon-arrow-down' style='cursor:pointer;font-size: 50pt;'></i>
                         </h1>
                     </div>
-
                     <div class='span2'>
-                        <p id='playback-bpm-label' class='header text-center' style="margin-top: 18px; font-size: 8rem;">120</p>
+                        <p id='playback-bpm-label' class='header text-center' style='margin-top: 18px; font-size: 8rem;'>120</p>
                     </div>
-
                     <div class='span1'>
                         <h1>
                             <i id='playback-up' class='icon-arrow-up' style='cursor:pointer;font-size: 50pt;'></i>
                         </h1>
                     </div>
-
                 </div>
+
             </div>
 
             <!-- Audio -->
@@ -84,20 +79,37 @@
                 </div>
 
                 <div class='row'>
+                    <div class='input-control switch'>
+                        <label>
+                            <input type='checkbox' checked='checked' id='audio-enabled' />
+                            <span class='check'></span>
+                        </label>
+                    </div>
                     <div class='button-set' data-role='button-group'>
-                        <button class='audio-button'>
-                            <span class='text-center'>Off</span>
+                        <button class='audio-tock-button size1 active' sound-name='audio/tock3'>
+                            <span class='text-center'>Pew</span>
                         </button>
-                        <button class='active audio-button' sound-name='audio/tick0'>
+                        <button class='audio-tock-button size1' sound-name='audio/tock0'>
+                            <span class='text-center'>Scree</span>
+                        </button>
+                        <button class='audio-tock-button size1' sound-name='audio/tock1'>
+                            <span class='text-center'>Gehk</span>
+                        </button>
+                        <button class='audio-tock-button size1' sound-name='audio/tock2'>
+                            <span class='text-center'>Bwee</span>
+                        </button>
+                    </div>
+                    <div class='button-set' data-role='button-group'>
+                        <button class='audio-tick-button size1 active' sound-name='audio/tick0'>
                             <span class='text-center'>Pong</span>
                         </button>
-                        <button class='audio-button' sound-name='audio/tick1'>
+                        <button class='audio-tick-button size1' sound-name='audio/tick1'>
                             <span class='text-center'>Boop</span>
                         </button>
-                        <button class='audio-button' sound-name='audio/tick2'>
+                        <button class='audio-tick-button size1' sound-name='audio/tick2'>
                             <span class='text-center'>Blep</span>
                         </button>
-                        <button class='audio-button' sound-name='audio/tick3'>
+                        <button class='audio-tick-button size1' sound-name='audio/tick3'>
                             <span class='text-center'>Ping</span>
                         </button>
                     </div>
@@ -109,7 +121,25 @@
                     </div>
 
                     <div class='span1'>
-                        <p id='audio-label' class='text-center' style="margin-top:-5px;">80</p>
+                        <p id='audio-label' class='text-center' style='margin-top:-5px;'>80</p>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='button-set' data-role='button-group'>
+                        <button class='sig-button' style='width:30px;' sig-value='2/4'>2/4</button>
+                        <button class='sig-button' style='width:30px;' sig-value='3/4'>3/4</button>
+                        <button class='sig-button active' style='width:30px;' sig-value='4/4'>4/4</button>
+                        <button class='sig-button' style='width:30px;' sig-value='5/4'>5/4</button>
+
+                        <button class='sig-button' style='width:30px;' sig-value='5/8'>5/8</button>
+                        <button class='sig-button' style='width:30px;' sig-value='6/8'>6/8</button>
+                        <button class='sig-button' style='width:30px;' sig-value='7/8'>7/8</button>
+                        <button class='sig-button' style='width:30px;' sig-value='9/8'>9/8</button>
+                        <button class='sig-button' style='width:40px;' sig-value='12/8'>12/8</button>
+
+                        <button class='sig-button' style='width:40px;' sig-value='15/16'>15/16</button>
+                        <button class='sig-button' style='width:40px;' sig-value='19/16'>19/16</button>
                     </div>
                 </div>
             </div>
@@ -128,26 +158,25 @@
                         <div id='timer-progress' class='progress-bar large' data-role='progress-bar' data-color='bg-green'></div>
                     </div>
                     <div class='span1'>
-                        <p id='timer-label' class='text-center' style="margin-top:-5px;">00:00:000</p>
+                        <p id='timer-label' class='text-center' style='margin-top:-5px;'>00:00:000</p>
                     </div>
                 </div>
 
                 <div class='row'>
                     <div class='button-set' data-role='button-group'>
-                        <button class='timer-button active' timer-value='0' style='color:#000000;'><b>Off</b></button>
-                        <button class='timer-button' timer-value='1'><b>1:00</b></button>
-                        <button class='timer-button' timer-value='2'><b>2:00</b></button>
-                        <button class='timer-button' timer-value='3'><b>3:00</b></button>
-                        <button class='timer-button' timer-value='4'><b>4:00</b></button>
-                        <button class='timer-button' timer-value='5'><b>5:00</b></button>
-                        <button class='timer-button' timer-value='10'><b>10:00</b></button>
+                        <button class='timer-button size1 active' timer-value='0' style='color:#000000;'><b>Off</b></button>
+                        <button class='timer-button size1' timer-value='1'><b>1:00</b></button>
+                        <button class='timer-button size1' timer-value='2'><b>2:00</b></button>
+                        <button class='timer-button size1' timer-value='3'><b>3:00</b></button>
+                        <button class='timer-button size1' timer-value='4'><b>4:00</b></button>
+                        <button class='timer-button size1' timer-value='5'><b>5:00</b></button>
                     </div>
                 </div>
 
             </div>
 
             <!-- Timer Curve -->
-            <div class="grid">
+            <div class='grid'>
 
                 <div class='row'>
                     <div class='span6'>
@@ -161,13 +190,13 @@
 
                 <div class='row'>
                     <div class='button-set' data-role='button-group'>
-                        <button class='timer-curve-button active' timer-value='0'><b>0%</b></button>
-                        <button class='timer-curve-button' timer-value='5'><b>5%</b></button>
-                        <button class='timer-curve-button' timer-value='10'><b>10%</b></button>
-                        <button class='timer-curve-button' timer-value='15'><b>15%</b></button>
-                        <button class='timer-curve-button' timer-value='20'><b>20%</b></button>
-                        <button class='timer-curve-button' timer-value='25'><b>25%</b></button>
-                        <button class='timer-curve-button' timer-value='50'><b>50%</b></button>
+                        <button class='timer-curve-button size1 active' timer-value='0'><b>0%</b></button>
+                        <button class='timer-curve-button size1' timer-value='10'><b>10%</b></button>
+                        <button class='timer-curve-button size1' timer-value='20'><b>20%</b></button>
+                        <button class='timer-curve-button size1' timer-value='30'><b>30%</b></button>
+                        <button class='timer-curve-button size1' timer-value='40'><b>40%</b></button>
+                        <button class='timer-curve-button size1' timer-value='50'><b>50%</b></button>
+                        <button class='timer-curve-button size1' timer-value='100'><b>100%</b></button>
                     </div>
                 </div>
 
@@ -185,7 +214,7 @@
                 <div class='row'>
                     <div class='button-set' data-role='button-group'>
                         <button class='active vs-button bg-white'>
-                            <span class='text-center'>Off</span>
+                            <span>&nbsp;</span>
                         </button>
                         <button class='vs-button bg-teal'>
                             <span>&nbsp;</span>

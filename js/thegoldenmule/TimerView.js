@@ -50,7 +50,7 @@
                 var name = attributes[i].name;
                 var value = attributes[i].value;
                 if (name === 'timer-value') {
-                    var minutes = parseInt(value, 10);
+                    var minutes = parseFloat(value);
                     if (0 === minutes) {
                         scope.stop();
                     } else {
