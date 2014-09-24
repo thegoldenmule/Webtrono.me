@@ -1,8 +1,6 @@
 Bugs + Polish
 ===
 
-* When the timer ends it should play a sound/flash the screen in some way.
-
 More Stuff
 ===
 
