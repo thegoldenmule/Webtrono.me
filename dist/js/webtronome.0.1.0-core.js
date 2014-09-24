@@ -895,7 +895,7 @@
 (function (global) {
     "use strict";
 
-    global.VisualizerView = function (metronome) {
+    global.VisualizerView = function (metronome, timer) {
         var color = '#FFFFFF';
 
         metronome.Ticked.add(function() {
@@ -913,6 +913,24 @@
                             'backgroundColor':'#ffffff'
                         },
                         100);
+                });
+        });
+
+        timer.Ended.add(function() {
+            $('body')
+                .animate(
+                {
+                    'backgroundColor':'#000000'
+                },
+                50,
+                "swing",
+                function() {
+                    $('body')
+                        .animate(
+                        {
+                            'backgroundColor':'#ffffff'
+                        },
+                        1000);
                 });
         });
 
@@ -942,7 +960,7 @@
         var playback = new PlaybackView(this.metronome);
         var timer = new TimerView(this.metronome);
         var timerCurve = new TimerCurveView(this.metronome, timer);
-        var visualizer = new VisualizerView(this.metronome);
+        var visualizer = new VisualizerView(this.metronome, timer);
         var audio = new AudioView(this.metronome, timer);
 
         $(document).keyup(function(event) {

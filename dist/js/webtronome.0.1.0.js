@@ -1,4 +1,4 @@
-var __buildTimestamp = "140924160500-0500";
+var __buildTimestamp = "140924171750-0500";
  /*\
  |*|
  |*|                     *******************************
@@ -23465,7 +23465,7 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
 (function (global) {
     "use strict";
 
-    global.VisualizerView = function (metronome) {
+    global.VisualizerView = function (metronome, timer) {
         var color = '#FFFFFF';
 
         metronome.Ticked.add(function() {
@@ -23483,6 +23483,24 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
                             'backgroundColor':'#ffffff'
                         },
                         100);
+                });
+        });
+
+        timer.Ended.add(function() {
+            $('body')
+                .animate(
+                {
+                    'backgroundColor':'#000000'
+                },
+                50,
+                "swing",
+                function() {
+                    $('body')
+                        .animate(
+                        {
+                            'backgroundColor':'#ffffff'
+                        },
+                        1000);
                 });
         });
 
@@ -23512,7 +23530,7 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
         var playback = new PlaybackView(this.metronome);
         var timer = new TimerView(this.metronome);
         var timerCurve = new TimerCurveView(this.metronome, timer);
-        var visualizer = new VisualizerView(this.metronome);
+        var visualizer = new VisualizerView(this.metronome, timer);
         var audio = new AudioView(this.metronome, timer);
 
         $(document).keyup(function(event) {
