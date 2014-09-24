@@ -1,4 +1,4 @@
-var __buildTimestamp = "140924113159-0500";
+var __buildTimestamp = "140924160500-0500";
  /*\
  |*|
  |*|                     *******************************
@@ -23514,6 +23514,12 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
         var timerCurve = new TimerCurveView(this.metronome, timer);
         var visualizer = new VisualizerView(this.metronome);
         var audio = new AudioView(this.metronome, timer);
+
+        $(document).keyup(function(event) {
+            if (27 === event.which) {
+                scope.metronome.pause();
+            }
+        });
 
         return scope;
     };

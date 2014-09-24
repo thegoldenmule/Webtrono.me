@@ -945,6 +945,12 @@
         var visualizer = new VisualizerView(this.metronome);
         var audio = new AudioView(this.metronome, timer);
 
+        $(document).keyup(function(event) {
+            if (27 === event.which) {
+                scope.metronome.pause();
+            }
+        });
+
         return scope;
     };
 
