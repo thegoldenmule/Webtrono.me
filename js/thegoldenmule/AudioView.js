@@ -6,7 +6,7 @@
 (function (global) {
     "use strict";
 
-    global.AudioView = function (metronome) {
+    global.AudioView = function (metronome, timer) {
         var scope = this;
         var volume = 80;
         var beatsPerMeasure = 4;
@@ -15,6 +15,13 @@
 
         this._tick = this.load('audio/tick0');
         this._tock = this.load('audio/tock3');
+        this._timerEnd = this.load('audio/timerEnd');
+
+        // play sound when timer ends
+        timer.Ended.add(function() {
+            scope._timerEnd.volume(volume / 100);
+            scope._timerEnd.play();
+        });
 
         metronome.Ticked.add(function() {
             if (null === scope._tick || !audioEnabled) {

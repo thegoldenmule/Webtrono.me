@@ -1,4 +1,4 @@
-var __buildTimestamp = "140923170734-0500";
+var __buildTimestamp = "140924113159-0500";
  /*\
  |*|
  |*|                     *******************************
@@ -22576,7 +22576,7 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
 (function (global) {
     "use strict";
 
-    global.AudioView = function (metronome) {
+    global.AudioView = function (metronome, timer) {
         var scope = this;
         var volume = 80;
         var beatsPerMeasure = 4;
@@ -22585,6 +22585,13 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
 
         this._tick = this.load('audio/tick0');
         this._tock = this.load('audio/tock3');
+        this._timerEnd = this.load('audio/timerEnd');
+
+        // play sound when timer ends
+        timer.Ended.add(function() {
+            scope._timerEnd.volume(volume / 100);
+            scope._timerEnd.play();
+        });
 
         metronome.Ticked.add(function() {
             if (null === scope._tick || !audioEnabled) {
@@ -23329,6 +23336,7 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
 
         this.Started = new signals.Signal();
         this.Stopped = new signals.Signal();
+        this.Ended = new signals.Signal();
 
         this._metronome = metronome;
 
@@ -23438,6 +23446,8 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
 
                 if (timeElapsed > this._totalTime) {
                     this.stop();
+                    this._metronome.pause();
+                    this.Ended.dispatch();
                 } else {
                     this._timerBar.progressbar('value', timeElapsed / this._totalTime * 100);
                     $('#timer-label').text(parseTime(this._totalTime - timeElapsed));
@@ -23503,7 +23513,7 @@ c.Metro.initDragTiles(a);c.Metro.initPulls(a);c.Metro.initPanels(a);c.Metro.init
         var timer = new TimerView(this.metronome);
         var timerCurve = new TimerCurveView(this.metronome, timer);
         var visualizer = new VisualizerView(this.metronome);
-        var audio = new AudioView(this.metronome);
+        var audio = new AudioView(this.metronome, timer);
 
         return scope;
     };

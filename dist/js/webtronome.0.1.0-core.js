@@ -6,7 +6,7 @@
 (function (global) {
     "use strict";
 
-    global.AudioView = function (metronome) {
+    global.AudioView = function (metronome, timer) {
         var scope = this;
         var volume = 80;
         var beatsPerMeasure = 4;
@@ -15,6 +15,13 @@
 
         this._tick = this.load('audio/tick0');
         this._tock = this.load('audio/tock3');
+        this._timerEnd = this.load('audio/timerEnd');
+
+        // play sound when timer ends
+        timer.Ended.add(function() {
+            scope._timerEnd.volume(volume / 100);
+            scope._timerEnd.play();
+        });
 
         metronome.Ticked.add(function() {
             if (null === scope._tick || !audioEnabled) {
@@ -759,6 +766,7 @@
 
         this.Started = new signals.Signal();
         this.Stopped = new signals.Signal();
+        this.Ended = new signals.Signal();
 
         this._metronome = metronome;
 
@@ -868,6 +876,8 @@
 
                 if (timeElapsed > this._totalTime) {
                     this.stop();
+                    this._metronome.pause();
+                    this.Ended.dispatch();
                 } else {
                     this._timerBar.progressbar('value', timeElapsed / this._totalTime * 100);
                     $('#timer-label').text(parseTime(this._totalTime - timeElapsed));
@@ -933,7 +943,7 @@
         var timer = new TimerView(this.metronome);
         var timerCurve = new TimerCurveView(this.metronome, timer);
         var visualizer = new VisualizerView(this.metronome);
-        var audio = new AudioView(this.metronome);
+        var audio = new AudioView(this.metronome, timer);
 
         return scope;
     };

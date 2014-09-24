@@ -41,6 +41,7 @@
 
         this.Started = new signals.Signal();
         this.Stopped = new signals.Signal();
+        this.Ended = new signals.Signal();
 
         this._metronome = metronome;
 
@@ -150,6 +151,8 @@
 
                 if (timeElapsed > this._totalTime) {
                     this.stop();
+                    this._metronome.pause();
+                    this.Ended.dispatch();
                 } else {
                     this._timerBar.progressbar('value', timeElapsed / this._totalTime * 100);
                     $('#timer-label').text(parseTime(this._totalTime - timeElapsed));

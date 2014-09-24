@@ -15,7 +15,7 @@
         var timer = new TimerView(this.metronome);
         var timerCurve = new TimerCurveView(this.metronome, timer);
         var visualizer = new VisualizerView(this.metronome);
-        var audio = new AudioView(this.metronome);
+        var audio = new AudioView(this.metronome, timer);
 
         return scope;
     };
